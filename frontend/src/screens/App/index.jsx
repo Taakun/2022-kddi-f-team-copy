@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+/* eslint-disable */
+
+import { Component } from 'react';
 
 import getQuestion from '../../utils/getQuestion';
 import TutorialModal from '../../components/TutorialModal';
@@ -7,21 +9,23 @@ import './styles.css';
 
 const numberOfQuestions = 13;
 
-const SearchContainer = ({ question, answersButtons, onButtonClick }) => (
-  <div className="searchContainer">
-    <div className="pr-10 pb-20">
-      <img src="/brain.png" alt="" />
+function SearchContainer({ question, answersButtons, onButtonClick }) {
+  return (
+    <div className="searchContainer">
+      <div className="pr-10 pb-20">
+        <img src="/brain.png" alt="" />
+      </div>
+      <h2>{question}</h2>
+      <div>
+        {answersButtons.map((answer) => (
+          <button key={Math.random()} onClick={() => onButtonClick(answer.value)}>
+            {answer.title}
+          </button>
+        ))}
+      </div>
     </div>
-    <h2>{question}</h2>
-    <div>
-      {answersButtons.map((answer) => (
-        <button key={Math.random()} onClick={() => onButtonClick(answer.value)}>
-          {answer.title}
-        </button>
-      ))}
-    </div>
-  </div>
-);
+  );
+}
 
 class App extends Component {
   state = {

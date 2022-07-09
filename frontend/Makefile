@@ -11,5 +11,9 @@ ds:
 	docker-compose stop
 
 # フォーマット整形
-fm:
+fmt-fix:
 	npm run format:fix
+
+# prettier and eslint
+fmt:
+	npm run format
