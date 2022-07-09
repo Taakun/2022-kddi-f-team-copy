@@ -70,7 +70,7 @@ class App extends Component {
       <div className="app">
         <header>
           <h1>FunTech!</h1>
-          <p>質問に答えて絵日記を提案します！</p>
+          <p>いくつかの簡単な質問に答えることで、絵日記を提案します！</p>
         </header>
         <main>
           { loading && !finished ? <h2>Carregando..</h2> : null }
