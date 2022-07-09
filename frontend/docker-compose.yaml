@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     container_name: funtech-front
-    image: node:latest
+    image: node:16-alpine
     volumes:
       - ./:/app
     working_dir: /app
