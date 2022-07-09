@@ -18,7 +18,7 @@ header {
 }
 
 body {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 main {
@@ -68,7 +68,7 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 8px 22px;
+  padding: 10px 24px;
   text-align: center;
   text-decoration: none;
   transition: all 250ms;

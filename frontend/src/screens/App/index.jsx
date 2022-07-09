@@ -9,7 +9,9 @@ const numberOfQuestions = 13;
 
 const SearchContainer = ({ question, answersButtons, onButtonClick }) => (
   <div className="searchContainer">
-    <img src="/brain.png" alt="" />
+    <div className="pr-10 pb-20">
+      <img src="/brain.png" alt=""/> 
+    </div>
     <h2>{ question }</h2>
     <div>
       { answersButtons.map(answer => <button key={Math.random()} onClick={() => onButtonClick(answer.value)}>{ answer.title }</button>) }
@@ -70,8 +72,8 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1 className='text-4xl'>ナツネーター</h1>
-          <h2 className='text-lg text-pink-700'>〜僕と魔神の夏休み〜</h2>
+          <h1 className='text-5xl sans-serif'>ナツネーター</h1>
+          <h2 className='text-xl text-pink-700'>〜僕と魔神の夏休み〜</h2>
         </header>
         <TutorialModal />
         <main>
