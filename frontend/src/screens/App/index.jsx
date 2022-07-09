@@ -4,6 +4,7 @@ import { Component } from 'react';
 
 import getQuestion from '../../utils/getQuestion';
 import TutorialModal from '../../components/TutorialModal';
+import Spinner from '../../components/Spinner';
 
 import './styles.css';
 
@@ -113,17 +114,18 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1 className="text-5xl sans-serif">ナツネーター</h1>
+          <h1 className="text-5xl sans-serif">Natunator</h1>
           <h2 className="text-xl text-pink-700">〜僕と魔神の夏休み〜</h2>
         </header>
         <TutorialModal />
         <main>
-          {loading && !finished ? <h2>Carregando..</h2> : null}
+          {loading && !finished ? <Spinner /> : null}
           {!loading && !finished ? (
             <SearchContainer question={question} answersButtons={answersButtons} onButtonClick={this.onButtonClick} />
           ) : null}
           {finished ? (
             <div className="finishedContainer">
+              <p className="my-8">あなたにおすすめの夏の過ごし方はこれ！</p>
               <img src={characterMatch.image} alt="" />
               <h2>{characterMatch.name}</h2>
               <button className="mt-20" onClick={this.onRetryButtonClick}>
