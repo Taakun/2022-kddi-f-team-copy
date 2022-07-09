@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import getQuestion from '../../utils/getQuestion';
+import TutorialModal from '../../components/TutorialModal';
 
 import './styles.css';
 
@@ -69,8 +70,10 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1>I WILL DISCOVER YOUR PROGRAMMING LANGUAGE!</h1>
+          <h1 className='text-4xl'>ナツネーター!</h1>
+          {/* <p>いくつかの簡単な質問に答えることで、絵日記を提案します！</p> */}
         </header>
+        <TutorialModal />
         <main>
           { loading && !finished ? <h2>Carregando..</h2> : null }
           { !loading && !finished ? <SearchContainer question={question} answersButtons={answersButtons} onButtonClick={this.onButtonClick} /> : null }

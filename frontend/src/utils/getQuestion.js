@@ -1,5 +1,4 @@
 
-import url from '../config/request';
 
 export default function getQuestion(alreadyFeatures, params, answers) {
   return new Promise(async (next, reject) => {
@@ -9,9 +8,8 @@ export default function getQuestion(alreadyFeatures, params, answers) {
       body = JSON.stringify({ alreadyFeatures, params, answers });
     else
       body = JSON.stringify({});
-
     try {
-      const call = await fetch(`${url}/api/questions/`, {
+      const call = await fetch(`${process.env.REACT_APP_API_URL}/api/questions/`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
