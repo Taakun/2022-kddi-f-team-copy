@@ -36,10 +36,12 @@ def ml(params, newParams, test_x):
     data = pandas.read_csv('all.csv')
 
     data = convertStringData(params, newParams, data, test_x)
+    print(data)
 
     train_x = data[newParams]
     data_y = data[['Unnamed: 0']]
     dropList = []
+    print("aaaaaaaaaaaaaaaaaa======================")
 
     for i in range(len(absoluteFeatures)):
         absoluteFeature = absoluteFeatures[i]
