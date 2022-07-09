@@ -70,7 +70,7 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1 className='text-5xl'>FunTech!</h1>
+          <h1 className='text-4xl'>ナツネーター!</h1>
           {/* <p>いくつかの簡単な質問に答えることで、絵日記を提案します！</p> */}
         </header>
         <TutorialModal />

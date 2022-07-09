@@ -27,6 +27,7 @@ const TutorialModal: React.VFC = () => {
       initialFocus={buttonRef}
     >
       <div className="flex flex-col items-center space-y-4 overflow-hidden rounded-lg">
+        <h1 className="text-2xl">使い方</h1>
         <p>いくつかの簡単な質問に答えることで、絵日記を提案します！</p>
         <div>
           <label className="flex items-center space-x-1 text-sm text-gray-900">
