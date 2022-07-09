@@ -8,7 +8,6 @@ export default function getQuestion(alreadyFeatures, params, answers) {
       body = JSON.stringify({ alreadyFeatures, params, answers });
     else
       body = JSON.stringify({});
-    console.log(body)
     try {
       const call = await fetch(`${process.env.REACT_APP_API_URL}/api/questions/`, {
         method: 'POST',
