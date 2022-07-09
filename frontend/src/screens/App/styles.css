@@ -9,11 +9,16 @@
   background-size: cover;
   background-color: azure;
   color: rgb(46, 45, 45);
+  padding: 40px;
 }
 
 header {
   text-align: center;
   max-width: 1280px;
+}
+
+body {
+  font-size: 1.2em;
 }
 
 main {
@@ -68,7 +73,7 @@ button {
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 16px;
+  font-size: 1.2rem;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
