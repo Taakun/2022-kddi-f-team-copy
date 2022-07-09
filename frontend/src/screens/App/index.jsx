@@ -70,8 +70,8 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1 className='text-4xl'>ナツネーター!</h1>
-          {/* <p>いくつかの簡単な質問に答えることで、絵日記を提案します！</p> */}
+          <h1 className='text-4xl'>ナツネーター</h1>
+          <h2 className='text-lg text-pink-700'>〜僕と魔神の夏休み〜</h2>
         </header>
         <TutorialModal />
         <main>
