@@ -1,27 +1,17 @@
-import { Dialog, Transition } from "@headlessui/react"
-import React, { Fragment } from "react"
+import { Dialog, Transition } from '@headlessui/react';
+import React, { Fragment } from 'react';
 
 export type BaseModalProps = {
-  open: boolean
-  onClose: () => void
-  children: React.ReactNode
-  initialFocus: React.MutableRefObject<HTMLElement | null> | undefined
-}
+  open: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+  initialFocus: React.MutableRefObject<HTMLElement | null> | undefined;
+};
 
-const BaseModal: React.VFC<BaseModalProps> = ({
-  open,
-  onClose,
-  children,
-  initialFocus,
-}) => {
+const BaseModal: React.VFC<BaseModalProps> = ({ open, onClose, children, initialFocus }) => {
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed inset-0 z-10 overflow-y-auto"
-        onClose={onClose}
-        initialFocus={initialFocus}
-      >
+      <Dialog as="div" className="fixed inset-0 z-10 overflow-y-auto" onClose={onClose} initialFocus={initialFocus}>
         <div className="min-h-screen px-4 text-center">
           <Transition.Child
             as={Fragment}
@@ -51,7 +41,7 @@ const BaseModal: React.VFC<BaseModalProps> = ({
         </div>
       </Dialog>
     </Transition>
-  )
-}
+  );
+};
 
-export default BaseModal
+export default BaseModal;
