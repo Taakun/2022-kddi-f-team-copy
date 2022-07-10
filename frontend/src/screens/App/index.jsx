@@ -126,9 +126,12 @@ class App extends Component {
           {finished ? (
             <div className="finishedContainer">
               <p className="my-8">あなたにおすすめの夏の過ごし方はこれ！</p>
-              <img src={characterMatch.image} alt="" />
+              <div class="img-box">
+                <img src="/watermark.jpg" alt="" class="img_01" />
+                <img src={characterMatch.image} alt="" className="scope" />
+              </div>
               <h2>{characterMatch.name}</h2>
-              <button className="mt-20" onClick={this.onRetryButtonClick}>
+              <button className="mt-10" onClick={this.onRetryButtonClick}>
                 最初からやり直す
               </button>
             </div>

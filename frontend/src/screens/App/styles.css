@@ -39,8 +39,8 @@ main div {
 }
 
 main img {
-  width: 80%;
-  max-width: 200px;
+  width: 90%;
+  max-width: 400px;
 }
 
 .searchContainer div {
@@ -140,4 +140,17 @@ button:hover {
   100% {
     transform: translate(24px, 0);
   }
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+.scope {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33%;
 }
