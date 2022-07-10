@@ -34,6 +34,7 @@ def convertStringData(params, newParams, values, test):
 
 def ml(params, newParams, test_x):
     data = pandas.read_csv('all.csv')
+    # data = csv_data
 
     data = convertStringData(params, newParams, data, test_x)
     print(data)
