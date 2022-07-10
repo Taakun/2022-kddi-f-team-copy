@@ -33,7 +33,7 @@ const BaseModal: React.VFC<BaseModalProps> = ({ open, onClose, children, initial
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <div className="absolute flex flex-col max-w-full p-6 space-y-4 min-h-[150px] text-center transition-all transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-xl rounded-2xl top-1/2 left-1/2">
+          <div className="absolute flex flex-col max-w-full w-3/4 sm:w-3/5 p-6 space-y-4 min-h-[150px] text-center transition-all transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-xl rounded-2xl top-1/2 left-1/2">
             {children}
           </div>
         </Transition.Child>

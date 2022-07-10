@@ -39,8 +39,8 @@ main div {
 }
 
 main img {
-  width: 80%;
-  max-width: 200px;
+  width: 90%;
+  max-width: 300px;
 }
 
 .searchContainer div {
@@ -82,4 +82,92 @@ button {
 
 button:hover {
   box-shadow: none;
+}
+
+/* Loading */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #abf6c6;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.img-box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.img-box img {
+  max-width: 600px;
+}
+
+.scope-text {
+  position: absolute;
+  top: 50%;
+  right: 33%;
+  writing-mode: vertical-rl;
+  transform: translate(-50%, 5%);
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  font-family: 'YuMincho', 'Yu Mincho', 'MS PMincho', serif;
+}
+
+.scope {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33%;
 }
