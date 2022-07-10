@@ -7,9 +7,17 @@ from app.algorithm.ml import ml
 from app.algorithm.learning import natu
 from app.info import features, questions, answers, questionWithComplete
 
+gYes = [1 for _ in range(8)]
+gN = [0 for _ in range(8)]
+gPlace = [0 for _ in range(8)]
+
 @app.route('/api/questions/', methods = ['POST'])
 @cross_origin()
 def getQuestions():
+    global gYes
+    global gN
+    global gPlace
+
     availableFeatures = features[:]
     characterMatch = None
 
@@ -40,6 +48,12 @@ def getQuestions():
         }
 
     if(not len(availableFeatures)):
+        gYes, gN, place_id = natu(gYes, gN, gPlace)
+        characterMatch = {
+          "name": characterMatch['name'][place_id],
+          "image": characterMatch['image'][place_id],
+        }
+
         return jsonify(
             characterMatch = characterMatch
         )
@@ -47,6 +61,12 @@ def getQuestions():
     feature = random.choice(availableFeatures)
     param = feature
     question = questions[feature]
+
+    print("***********************")
+    print(feature)
+    print(question)
+    print(answers[feature])
+    print("***********************")
 
     return jsonify(
       feature = feature,

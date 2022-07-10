@@ -33,27 +33,28 @@ def change(place,sub,y,n):
 def place_point(place,y,n):
     pl=[]
     for i in range(len(place)):
-        pl.append([place[i],y[i]/(n[i]+y[i])])
+        pl.append(y[i]/(n[i]+y[i]))
     return pl
 
 # これを呼び出す
-def natu(q,ans,y,n,place,sub):
+def natu(q,ans,y,n,place):
     A=list(update(q,"No",y,n)) # 更新
     y=A[0]
     n=A[1]
     
     place_p=place_point(place,y,n) # 点数化
+    place_id = place_p.index(max(place_p))
     
-    if random.randint(1,3)==1: # 1/3の確率で交換する
-        place_p=list(change(place_p,sub,y,n))[0]
-        sub=list(change(place_p,sub,y,n))[1]
-        y=list(change(place_p,sub,y,n))[2]
-        n=list(change(place_p,sub,y,n))[3]
-        place=[]
-        for i in range(len(place_p)):
-            place.append(place_p[i][0])
+    # if random.randint(1,3)==1: # 1/3の確率で交換する
+    #     place_p=list(change(place_p,sub,y,n))[0]
+    #     sub=list(change(place_p,sub,y,n))[1]
+    #     y=list(change(place_p,sub,y,n))[2]
+    #     n=list(change(place_p,sub,y,n))[3]
+    #     place=[]
+    #     for i in range(len(place_p)):
+    #         place.append(place_p[i][0])
     
-    return y,n,place,sub
+    return y,n,place_id
 
 # natsuのテスト
 def test():
