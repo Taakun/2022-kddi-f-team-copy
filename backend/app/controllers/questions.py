@@ -4,6 +4,7 @@ from flask import jsonify, request
 from flask_cors import cross_origin
 from app import app
 from app.algorithm.ml import ml
+from app.algorithm.learning import natu
 from app.info import features, questions, answers, questionWithComplete
 
 @app.route('/api/questions/', methods = ['POST'])

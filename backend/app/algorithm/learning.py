@@ -56,7 +56,7 @@ def natu(q,ans,y,n,place,sub):
     return y,n,place,sub
 
 # natsuのテスト
-def test:
+def test():
   # 質問が3パターンの時
   # 初期条件
   y=[1 for _ in range(8)]
