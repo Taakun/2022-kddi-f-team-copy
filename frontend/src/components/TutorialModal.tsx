@@ -24,7 +24,7 @@ const TutorialModal: React.VFC = () => {
     <BaseModal open={openTutorialModal} onClose={() => setOpenTutorialModal(false)} initialFocus={buttonRef}>
       <div className="flex flex-col items-center space-y-4 overflow-hidden rounded-lg">
         <h1 className="text-2xl">使い方</h1>
-        <p className="text-base text-gray-600">ナツネーターのいくつかの質問に答えることで、独自のアルゴリズムに基づいてあなたにおすすめの夏休みの過ごし方を提案します！</p>
+        <p className="text-base text-gray-600">ナツプラのいくつかの質問に答えることで、独自のアルゴリズムに基づいてあなたにおすすめの夏休みの過ごし方を提案します！</p>
         <div>
           <label className="flex items-center space-x-1 text-sm text-gray-900">
             <input type="checkbox" checked={neverShow} onChange={(e) => setNeverShow(e.target.checked)} />

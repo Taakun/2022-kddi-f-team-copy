@@ -114,8 +114,8 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1 className="text-5xl sans-serif">Natunator</h1>
-          <h2 className="text-xl text-pink-700">〜僕と魔神の夏休み〜</h2>
+          <h1 className="text-5xl sans-serif">Natsu++</h1>
+          <h2 className="text-xl text-pink-700">〜ナツプラ〜</h2>
         </header>
         <TutorialModal />
         <main>
