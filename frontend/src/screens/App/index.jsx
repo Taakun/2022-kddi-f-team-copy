@@ -129,8 +129,8 @@ class App extends Component {
               <div class="img-box">
                 <img src="/watermark.jpg" alt="" class="img_01" />
                 <img src={characterMatch.image} alt="" className="scope" />
+                <p className="scope-text">{characterMatch.name}</p>
               </div>
-              <h2>{characterMatch.name}</h2>
               <button className="mt-10" onClick={this.onRetryButtonClick}>
                 最初からやり直す
               </button>

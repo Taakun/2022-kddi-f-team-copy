@@ -40,7 +40,7 @@ main div {
 
 main img {
   width: 90%;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .searchContainer div {
@@ -145,8 +145,25 @@ button:hover {
 .img-box {
   position: relative;
   width: 100%;
-  max-width: 350px;
+  max-width: 600px;
 }
+
+.img-box img {
+  max-width: 600px;
+}
+
+.scope-text {
+  position: absolute;
+  top: 50%;
+  right: 33%;
+  writing-mode: vertical-rl;
+  transform: translate(-50%, 5%);
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  font-family: 'YuMincho', 'Yu Mincho', 'MS PMincho', serif;
+}
+
 .scope {
   position: absolute;
   top: 30%;
